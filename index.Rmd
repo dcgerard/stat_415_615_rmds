@@ -1,0 +1,54 @@
+---
+title: "Regression"
+author: "David Gerard"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Synopsis
+
+This website contains the teaching materials for STAT 415/615 Regression, taught at American 
+University by [David Gerard](https://dcgerard.github.io/).
+
+# Administrative
+
+- Syllabus
+
+# Lectures
+
+- 01 Crash Course in R
+  - R introduction, reading in data, data transformations
+  - Plotting with `qplot()`
+  - Chapter 2 of ROS
+- 02 Review
+  - Mathematical prerequisites
+  - Distributions
+  - Statistical inference.
+  - Chapters 3 and 4 of ROS
+- 03 Simple linear regression
+  - Model
+  - Estimation
+  - Hypothesis testing
+  - Assumptions
+  - Transformations
+  - Chapters 6, 7, and 8 of ROS
+- 04 Multiple linear regression
+  - Model/Interpretation (including interactions, indicators)
+  - Estimation
+  - Hypothesis Testing
+  - Assumptions
+  - Transformations
+  - Chapters 10, 11, 12 of ROS
+- 05 Design
+  - Power
+  - Sample size calculation
+  - Chapter 16 ROS
+- 06 Missing data
+  - Chapters 17 of ROS
+- 07 Causal Inference (if time permits)
+  - Chapters 18 and 19 of ROS
+  
