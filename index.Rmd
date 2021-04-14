@@ -21,8 +21,9 @@ University by [David Gerard](https://dcgerard.github.io/).
 # Lectures
 
 - 01 Crash Course in R
-  - R introduction, reading in data, data transformations
-  - Plotting with `qplot()`
+  - [R introduction](./01_r_intro.html): R Studio, R basics, data frames, loading data into R, plotting with `qplot()`.
+  - [R Markdown introduction](01_r_markdown.html).
+  - [`qplot()` cheat sheet](./01_qplot_cheatsheet.html).
   - Chapter 2 of ROS
 - 02 Review
   - Mathematical prerequisites

@@ -13,7 +13,7 @@
 
 <meta name="date" content="2021-04-14" />
 
-<title>Regression</title>
+<title>Introduction to R</title>
 
 <script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -246,10 +246,10 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
+  <a href="./index.html">Home</a>
 </li>
 <li>
-  <a href="data.html">Data</a>
+  <a href="./data.html">Data</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -268,71 +268,85 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Regression</h1>
+<h1 class="title toc-ignore">Introduction to R</h1>
 <h4 class="author">David Gerard</h4>
 <h4 class="date">2021-04-14</h4>
 
 </div>
 
-
-<div id="synopsis" class="section level1">
-<h1>Synopsis</h1>
-<p>This website contains the teaching materials for STAT 415/615 Regression, taught at American University by <a href="https://dcgerard.github.io/">David Gerard</a>.</p>
-</div>
-<div id="administrative" class="section level1">
-<h1>Administrative</h1>
+<div id="TOC">
 <ul>
-<li>Syllabus</li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#loading-in-data">Loading in Data</a></li>
+<li><a href="#data-frames">Data Frames</a></li>
+<li><a href="#plotting">Plotting</a></li>
+<li><a href="#things-i-expect-you-to-know-off-the-top-of-your-head">Things I expect you to know off the top of your head:</a></li>
 </ul>
 </div>
-<div id="lectures" class="section level1">
-<h1>Lectures</h1>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
 <ul>
-<li>01 Crash Course in R
+<li><p>R is a statistical programming language designed to analyze data.</p></li>
+<li><p>This is not an R course. But you need to know some tools to summarize/plot/model data.</p></li>
+<li><p>R is free, widely used, more generally applicable (beyond linear regression), and eases reproducibility. So this is what we will use.</p></li>
+<li><p>Python would have been a good choice too, but you can learn that in the machine learning course (STAT 427/627).</p></li>
+</ul>
+</div>
+<div id="loading-in-data" class="section level1">
+<h1>Loading in Data</h1>
 <ul>
-<li><a href="./01_r_intro.html">R introduction</a>: R Studio, R basics, data frames, loading data into R, plotting with <code>qplot()</code>.</li>
-<li><a href="01_r_markdown.html">R Markdown introduction</a>.</li>
-<li><a href="./01_qplot_cheatsheet.html"><code>qplot()</code> cheat sheet</a>.</li>
-<li>Chapter 2 of ROS</li>
+<li><p>Use <code>read_csv()</code> from the <code>{readr}</code> package to load tabular data into R.</p>
+<pre class="r"><code>library(readr)</code></pre></li>
+<li><p>For other file formats, you need to use other functions, such as <code>read_tsv()</code>, <code>read_table()</code>, <code>read_fwf()</code>, etc. I will try to make sure <code>read_csv()</code> works for all datasets in this course.</p></li>
+</ul>
+</div>
+<div id="data-frames" class="section level1">
+<h1>Data Frames</h1>
+<pre class="r"><code>library(dplyr)</code></pre>
+<ul>
+<li><p>Use the <code>mutate()</code> function from the <code>{dplyr}</code> package to make variable transformations.</p></li>
+<li><p>Use <code>glimpse()</code> to get a brief look at the data frame.</p></li>
+<li><p>Use <code>View()</code> to see a spreadsheet of the data frame (never put this in an R Markdown file). Note the capital “V”.</p></li>
+<li><p>Use <code>rename()</code> to rename variables.</p></li>
+<li><p>Use <code>filter()</code> to remove rows.</p></li>
+</ul>
+</div>
+<div id="plotting" class="section level1">
+<h1>Plotting</h1>
+<ul>
+<li><p>In this class, we will use the <code>qplot()</code> function from the <code>{ggplot2}</code> package for all plotting.</p>
+<pre class="r"><code>library(ggplot2)</code></pre></li>
+<li><p><code>{ggplot2}</code> has much more functionality than the <code>qplot()</code> function that you can learn about in STAT 412/612.</p></li>
+</ul>
+</div>
+<div id="things-i-expect-you-to-know-off-the-top-of-your-head" class="section level1">
+<h1>Things I expect you to know off the top of your head:</h1>
+<ul>
+<li><code>help()</code>: Open help file.</li>
+<li><code>install.packages()</code>: Install an external R package.</li>
+<li><code>library()</code>: Load the functions of an external R package so you can use them.</li>
+<li><code>&lt;-</code>: Variable assignment.</li>
+<li><code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>: Arithmetic operations.</li>
+<li><code>^</code>: Powers.</li>
+<li><code>sqrt()</code>: Square root.</li>
+<li><code>log()</code>: Log (base e).</li>
+<li><code>$</code>: Extracting a variable from a data frame.</li>
+<li><code>View()</code>: Look at a spreadsheet of data.</li>
+<li><code>head()</code>: See first six elements.</li>
+<li>From <code>{readr}</code>:
+<ul>
+<li><code>read_csv()</code>: Loading in tabular data.</li>
 </ul></li>
-<li>02 Review
+<li>From <code>{dplyr}</code>:
 <ul>
-<li>Mathematical prerequisites</li>
-<li>Distributions</li>
-<li>Statistical inference.</li>
-<li>Chapters 3 and 4 of ROS</li>
+<li><code>glimpse()</code>: Look at a data frame.</li>
+<li><code>mutate()</code>: Variable transformation.</li>
+<li><code>rename()</code>: Variable renaming.</li>
 </ul></li>
-<li>03 Simple linear regression
+<li>From <code>{ggplot2}</code>
 <ul>
-<li>Model</li>
-<li>Estimation</li>
-<li>Hypothesis testing</li>
-<li>Assumptions</li>
-<li>Transformations</li>
-<li>Chapters 6, 7, and 8 of ROS</li>
-</ul></li>
-<li>04 Multiple linear regression
-<ul>
-<li>Model/Interpretation (including interactions, indicators)</li>
-<li>Estimation</li>
-<li>Hypothesis Testing</li>
-<li>Assumptions</li>
-<li>Transformations</li>
-<li>Chapters 10, 11, 12 of ROS</li>
-</ul></li>
-<li>05 Design
-<ul>
-<li>Power</li>
-<li>Sample size calculation</li>
-<li>Chapter 16 ROS</li>
-</ul></li>
-<li>06 Missing data
-<ul>
-<li>Chapters 17 of ROS</li>
-</ul></li>
-<li>07 Causal Inference (if time permits)
-<ul>
-<li>Chapters 18 and 19 of ROS</li>
+<li><code>qplot()</code>: Make a histogram or scatterplot.</li>
 </ul></li>
 </ul>
 </div>
