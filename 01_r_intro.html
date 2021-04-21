@@ -277,9 +277,8 @@ $(document).ready(function () {
 <div id="TOC">
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#loading-in-data">Loading in Data</a></li>
+<li><a href="#r-basics">R Basics</a></li>
 <li><a href="#data-frames">Data Frames</a></li>
-<li><a href="#plotting">Plotting</a></li>
 <li><a href="#things-i-expect-you-to-know-off-the-top-of-your-head">Things I expect you to know off the top of your head:</a></li>
 </ul>
 </div>
@@ -293,31 +292,28 @@ $(document).ready(function () {
 <li><p>Python would have been a good choice too, but you can learn that in the machine learning course (STAT 427/627).</p></li>
 </ul>
 </div>
-<div id="loading-in-data" class="section level1">
-<h1>Loading in Data</h1>
+<div id="r-basics" class="section level1">
+<h1>R Basics</h1>
 <ul>
-<li><p>Use <code>read_csv()</code> from the <code>{readr}</code> package to load tabular data into R.</p>
-<pre class="r"><code>library(readr)</code></pre></li>
-<li><p>For other file formats, you need to use other functions, such as <code>read_tsv()</code>, <code>read_table()</code>, <code>read_fwf()</code>, etc. I will try to make sure <code>read_csv()</code> works for all datasets in this course.</p></li>
+<li>I cannot teach you everything there is to know in R. When you know the name of a function, but don’t know the commands, use the <code>help()</code> function. For example, to learn more about <code>log()</code> type</li>
+</ul>
+<pre class="r"><code>help(log)</code></pre>
+<ul>
+<li>Alternatively, if you do not know the name of the function, you can Google the functionality you want. Googling coding solutions is a lot of what real data scientists do. Just append what you are Googling with “in R”. So, for example, “linear mixed effects models in R”.</li>
 </ul>
 </div>
 <div id="data-frames" class="section level1">
 <h1>Data Frames</h1>
-<pre class="r"><code>library(dplyr)</code></pre>
+<pre class="r"><code>library(readr)
+library(dplyr)</code></pre>
 <ul>
+<li><p>Use <code>read_csv()</code> from the <code>{readr}</code> package to load tabular data into R.</p></li>
+<li><p>For other file formats, you need to use other functions, such as <code>read_tsv()</code>, <code>read_table()</code>, <code>read_fwf()</code>, etc. I will try to make sure <code>read_csv()</code> works for all datasets in this course.</p></li>
 <li><p>Use the <code>mutate()</code> function from the <code>{dplyr}</code> package to make variable transformations.</p></li>
 <li><p>Use <code>glimpse()</code> to get a brief look at the data frame.</p></li>
 <li><p>Use <code>View()</code> to see a spreadsheet of the data frame (never put this in an R Markdown file). Note the capital “V”.</p></li>
 <li><p>Use <code>rename()</code> to rename variables.</p></li>
 <li><p>Use <code>filter()</code> to remove rows.</p></li>
-</ul>
-</div>
-<div id="plotting" class="section level1">
-<h1>Plotting</h1>
-<ul>
-<li><p>In this class, we will use the <code>qplot()</code> function from the <code>{ggplot2}</code> package for all plotting.</p>
-<pre class="r"><code>library(ggplot2)</code></pre></li>
-<li><p><code>{ggplot2}</code> has much more functionality than the <code>qplot()</code> function that you can learn about in STAT 412/612.</p></li>
 </ul>
 </div>
 <div id="things-i-expect-you-to-know-off-the-top-of-your-head" class="section level1">

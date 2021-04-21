@@ -1,5 +1,5 @@
 ---
-title: "`qplot` R Graphics Cheat Sheet"
+title: "R Graphics with `qplot`"
 author: "David Gerard"
 date: "`r Sys.Date()`"
 output:  
@@ -11,13 +11,14 @@ urlcolor: "blue"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, 
-                      fig.width = 3, 
-                      fig.height = 2, 
+                      fig.width = 4, 
+                      fig.height = 3, 
                       fig.align = "center")
 ```
 
-# Abstract:
-I reproduce some of the plots from Rstudio's [`{ggplot2}`](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf) cheat sheet using just the `qplot` function.
+# Introduction
+
+I show you how to create the most important plots for this course.
 
 ```{r, echo=FALSE}
 set.seed(1)

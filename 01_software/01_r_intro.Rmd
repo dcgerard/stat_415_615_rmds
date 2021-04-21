@@ -23,21 +23,30 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Python would have been a good choice too, but you can learn that in the machine learning course (STAT 427/627).
 
-# Loading in Data
+# R Basics 
 
-- Use `read_csv()` from the `{readr}` package to load tabular data into R.
+- I cannot teach you everything there is to know in R. When you
+know the name of a function, but don't know the commands, use
+the `help()` function. For example, to learn more about `log()` type
 
-    ```{r}
-    library(readr)
-    ```
+```{r, eval = FALSE}
+help(log)
+```
 
-- For other file formats, you need to use other functions, such as `read_tsv()`, `read_table()`, `read_fwf()`, etc. I will try to make sure `read_csv()` works for all datasets in this course.
+- Alternatively, if you do not know the name of the function, you can
+Google the functionality you want. Googling coding solutions is a
+lot of what real data scientists do. Just append what you are Googling with "in R". So, for example, "linear mixed effects models in R".
 
 # Data Frames
 
 ```{r, message = FALSE}
+library(readr)
 library(dplyr)
 ```
+
+- Use `read_csv()` from the `{readr}` package to load tabular data into R.
+
+- For other file formats, you need to use other functions, such as `read_tsv()`, `read_table()`, `read_fwf()`, etc. I will try to make sure `read_csv()` works for all datasets in this course.
 
 - Use the `mutate()` function from the `{dplyr}` package to make variable transformations.
     
@@ -48,16 +57,6 @@ library(dplyr)
 - Use `rename()` to rename variables.
 
 - Use `filter()` to remove rows.
-
-# Plotting
-
-- In this class, we will use the `qplot()` function from the `{ggplot2}` package for all plotting.
-
-    ```{r}
-    library(ggplot2)
-    ```
-
-- `{ggplot2}` has much more functionality than the `qplot()` function that you can learn about in STAT 412/612.
 
 # Things I expect you to know off the top of your head:
 

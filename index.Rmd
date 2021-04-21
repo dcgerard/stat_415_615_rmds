@@ -22,8 +22,8 @@ University by [David Gerard](https://dcgerard.github.io/).
 
 - 01 Crash Course in R
   - [R introduction](./01_r_intro.html): R Studio, R basics, data frames, loading data into R, plotting with `qplot()`.
-  - [R Markdown introduction](01_r_markdown.html).
-  - [`qplot()` cheat sheet](./01_qplot_cheatsheet.html).
+  - [R markdown introduction](01_r_markdown.html).
+  - [R graphics with `qplot()`](./01_qplot.html).
   - Chapter 2 of ROS
 - 02 Review
   - Mathematical prerequisites
