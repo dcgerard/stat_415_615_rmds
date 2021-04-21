@@ -16,7 +16,7 @@ University by [David Gerard](https://dcgerard.github.io/).
 
 # Administrative
 
-- Syllabus
+- [Syllabus](./syllabus.html)
 
 # Lectures
 
