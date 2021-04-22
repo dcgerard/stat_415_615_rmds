@@ -1,14 +1,14 @@
 name: "Stat_415_615"
-output_dir: ".."
+output_dir: "."
 navbar:
   title: "Teaching Website for STAT 415/615"
   left:
     - text: "Home"
-      href: ./index.html
+      href: index.html
     - text: "Data"
-      href: ./data.html
+      href: data.html
   right:
-    - icon: fa-github
+    - text: GitHub
       href: https://github.com/dcgerard/stat_415_615
 output:
   html_document:

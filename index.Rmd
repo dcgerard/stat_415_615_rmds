@@ -27,12 +27,13 @@ University by [David Gerard](https://dcgerard.github.io/).
   - Chapter 2 of ROS
 - 02 Review
   - Mathematical prerequisites
+  - [Matrix stuff](./02_matrix_stuff.html)
   - Distributions
   - Statistical inference.
   - Chapters 3 and 4 of ROS
 - 03 Simple linear regression
   - Model
-  - Estimation
+  - [Estimation by Ordinary Least Squares](./03_ols.html)
   - Hypothesis testing
   - Assumptions
   - Transformations

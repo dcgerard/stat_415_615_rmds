@@ -11,7 +11,7 @@
 
 <meta name="author" content="David Gerard" />
 
-<meta name="date" content="2021-04-02" />
+<meta name="date" content="2021-04-22" />
 
 <title>Data</title>
 
@@ -60,6 +60,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 
 
@@ -270,12 +292,29 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Data</h1>
 <h4 class="author">David Gerard</h4>
-<h4 class="date">2021-04-02</h4>
+<h4 class="date">2021-04-22</h4>
 
 </div>
 
 
-
+<ul>
+<li><a href="./data/hibbs.csv">hibbs.csv</a>: Data from Chapter 7 of <a href="https://avehtari.github.io/ROS-Examples/">ROS</a> based on the “bread and peace” model of <span class="citation">Hibbs (2000)</span> which predicts incumbent party’s share of the two-party vote as a function of income growth.
+<ul>
+<li><code>year</code>: Year of the election.</li>
+<li><code>growth</code>: Inflation-adjusted growth in average personal income.</li>
+<li><code>vote</code>: Incumbant party’s vote share of the two-party vote (excludes third parties).</li>
+<li><code>inc_party_candidate</code>: The candidate of the incumbant party.</li>
+<li><code>other_candidate</code>: The candidate of the other party.</li>
+</ul></li>
+</ul>
+<div id="references" class="section level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-hibbs2000bread" class="csl-entry">
+Hibbs, Douglas A. 2000. <span>“Bread and Peace Voting in US Presidential Elections.”</span> <em>Public Choice</em> 104 (1): 149–80. <a href="https://doi.org/10.1023/A:1005292312412">https://doi.org/10.1023/A:1005292312412</a>.
+</div>
+</div>
+</div>
 
 
 
