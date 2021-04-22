@@ -40,7 +40,8 @@ growth_mean <- mean(hibbs$growth)
 lmout <- lm(vote ~ growth, data = hibbs)
 slope_max <- coef(lmout)[["growth"]]
 
-slope_seq <- seq(0, slope_max, length.out = 50)
+slope_seq <- seq(0, slope_max, length.out = 25)
+slope_seq <- c(slope_seq, rev(slope_seq))
 
 pl_list <- list()
 for (i in seq_along(slope_seq)) {
@@ -52,7 +53,7 @@ for (i in seq_along(slope_seq)) {
            y1 = slope * x1,
            x2 = x1,
            y2 = vote_center,
-           diff = abs(y1 - y2) * sign(x1) * -1,
+           diff = y1 - y2,
            x3 = x1 + diff,
            y3 = y2,
            x4 = x3,
@@ -90,9 +91,9 @@ for (i in seq_along(slope_seq)) {
     theme(legend.position = "none") +
     geom_abline(slope = slope, intercept = vote_mean - slope * growth_mean) +
     ylim(44.6, 61.8) +
-    xlim(-7, 7) +
+    xlim(-7, 12) +
     ggtitle(paste0("Sum of Squares: ", round(ss))) +
-    scale_fill_gradient(low = "blue", high = "orange") ->
+    scale_fill_gradient(low = "blue", high = "orange", breaks = seq(0, 10, length = 10)) ->
     pl
 
   pl_list[[i]] <- pl
