@@ -1,5 +1,5 @@
 name: "Stat_415_615"
-output_dir: ".."
+output_dir: "../../docs"
 navbar:
   title: "Teaching Website for STAT 415/615"
   left:
